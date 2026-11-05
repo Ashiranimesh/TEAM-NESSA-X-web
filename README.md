@@ -62,3 +62,4 @@ TEAM-NESSA-X-R/
 - **Multilingual Voice Support**: Integrates Web Speech API and fallback audio clips for Sinhala (*ආයුබෝවන්*), Tamil (*வணக்கம்*), and English.
 - **In-Browser Audio Recording**: Record and save your own voice clips directly to browser IndexedDB using the HTML5 MediaRecorder API.
 - **Interactive Phone Wireframe Mockup**: Live tab switching (Home, Explore Map, Language Cards, Travel Diary) with dynamic entry adding.
+#...
