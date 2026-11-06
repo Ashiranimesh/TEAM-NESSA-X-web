@@ -1,6 +1,10 @@
-# Smart Tikirilia 1.0 (React + Vite)
+> # Smart Tikirilia 1.0 (React + Vite)
 
-> Traditional-costume doll with a companion cultural app for Sri Lanka, converted from vanilla HTML to a modern **React + Vite** single-page application without Tailwind CSS.-created by erani chamathsra( @eranihaththasingha2003-coder · she/her ),edited and pubished by ashira nimesh( @Ashiranimesh )
+> Traditional-costume doll with a companion cultural app for Sri Lanka, converted from vanilla HTML to a modern **React + Vite** single-page application without Tailwind CSS.
+
+**Created by:** [@eranihaththasingha2003-coder](https://github.com/eranihaththasingha2003-coder) (She/Her)
+
+**Edited and published by:** [@Ashiranimesh](https://github.com/Ashiranimesh)
 
 ## 🚀 Getting Started
 
