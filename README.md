@@ -2,7 +2,7 @@
 
 > Traditional-costume doll with a companion cultural app for Sri Lanka, converted from vanilla HTML to a modern **React + Vite** single-page application without Tailwind CSS.
 
-**Created by:** [@eranihaththasingha2003-coder](https://github.com/eranihaththasingha2003-coder) (She/Her)
+**Created by:** [@eranihaththasingha2003-coder](https://github.com/eranihaththasingha2003-coder) 
 
 **Edited and published by:** [@Ashiranimesh](https://github.com/Ashiranimesh)
 
