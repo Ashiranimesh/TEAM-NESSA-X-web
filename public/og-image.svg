@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF1E8" />
+      <stop offset="100%" stop-color="#fae3d5" />
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F3C65B" />
+      <stop offset="100%" stop-color="#e2a832" />
+    </linearGradient>
+    <linearGradient id="maroonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#792D40" />
+      <stop offset="100%" stop-color="#551a29" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="18" flood-color="#792D40" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGrad)" />
+  
+  <!-- Subtle decorative ambient circles -->
+  <circle cx="1100" cy="100" r="340" fill="#C6A1D2" opacity="0.12" />
+  <circle cx="950" cy="520" r="280" fill="#8DA17B" opacity="0.15" />
+  <circle cx="100" cy="580" r="220" fill="#F3C65B" opacity="0.18" />
+
+  <!-- Left Content Box -->
+  <g transform="translate(90, 110)">
+    <!-- Pill Tag -->
+    <rect width="210" height="42" rx="21" fill="url(#maroonGrad)" />
+    <text x="105" y="27" fill="#ffffff" font-family="'Fredoka', system-ui, sans-serif" font-weight="600" font-size="16" text-anchor="middle" letter-spacing="1">
+      TEAM NESSA • SRI LANKA
+    </text>
+
+    <!-- Main Title -->
+    <text x="0" y="125" fill="#792D40" font-family="'Fredoka', system-ui, sans-serif" font-weight="700" font-size="64">
+      Smart Tikirilia 1.0
+    </text>
+
+    <!-- Subtitle -->
+    <text x="0" y="185" fill="#4a1b2a" font-family="'Nunito', system-ui, sans-serif" font-weight="700" font-size="30">
+      Your Cultural Companion in Sri Lanka
+    </text>
+
+    <!-- Description Paragraph -->
+    <text x="0" y="240" fill="#4a1b2a" font-family="'Nunito', system-ui, sans-serif" font-weight="400" font-size="21" opacity="0.9">
+      <tspan x="0" dy="0">Traditional-costume doll paired with an interactive mobile</tspan>
+      <tspan x="0" dy="32">companion app. Learn Sinhala and Tamil, listen to folklore,</tspan>
+      <tspan x="0" dy="32">and explore iconic cultural landmarks together.</tspan>
+    </text>
+
+    <!-- Features Badges -->
+    <g transform="translate(0, 360)">
+      <rect width="180" height="46" rx="23" fill="#ffffff" stroke="#f0d9c8" stroke-width="2" />
+      <text x="90" y="29" fill="#792D40" font-family="'Fredoka', sans-serif" font-weight="600" font-size="16" text-anchor="middle">
+        🗣️ Bilingual Voice
+      </text>
+
+      <rect x="195" width="180" height="46" rx="23" fill="#ffffff" stroke="#f0d9c8" stroke-width="2" />
+      <text x="285" y="29" fill="#792D40" font-family="'Fredoka', sans-serif" font-weight="600" font-size="16" text-anchor="middle">
+        🗺️ Island Stories
+      </text>
+
+      <rect x="390" width="170" height="46" rx="23" fill="#ffffff" stroke="#f0d9c8" stroke-width="2" />
+      <text x="475" y="29" fill="#792D40" font-family="'Fredoka', sans-serif" font-weight="600" font-size="16" text-anchor="middle">
+        🌐 tikirilia.lk
+      </text>
+    </g>
+  </g>
+
+  <!-- Right Hero Mascot Illustration -->
+  <g transform="translate(860, 315)" filter="url(#shadow)">
+    <!-- Stage Blob -->
+    <circle r="220" fill="#FFF9F4" stroke="#F3C65B" stroke-width="8" />
+    <circle r="195" fill="#C6A1D2" opacity="0.35" />
+
+    <!-- Tikirilia Avatar -->
+    <g transform="translate(0, -20) scale(1.7)">
+      <!-- Hair Bun -->
+      <circle cx="45" cy="18" r="11" fill="#F3C65B" />
+      <!-- Hair Base -->
+      <circle cx="0" cy="0" r="48" fill="#F3C65B" />
+      
+      <!-- Dress -->
+      <path d="M-55 70c4-30 25-42 55-42s51 12 55 42z" fill="#792D40" />
+      <path d="M-38 70c6-20 20-30 38-30s32 10 38 70" fill="none" stroke="#F3C65B" stroke-width="4" stroke-linecap="round" />
+
+      <!-- Head -->
+      <circle cx="0" cy="8" r="38" fill="#FFDCC8" />
+
+      <!-- Bangs -->
+      <path d="M-36 -3c10-20 30-26 48-18 11 5 19 11 24 20-20-3-42-8-72-2z" fill="#F3C65B" />
+
+      <!-- Cheeks -->
+      <circle cx="-22" cy="18" r="7" fill="#f6a5b0" opacity="0.85" />
+      <circle cx="22" cy="18" r="7" fill="#f6a5b0" opacity="0.85" />
+
+      <!-- Eyes -->
+      <ellipse cx="-16" cy="7" rx="4.5" ry="6" fill="#2a1520" />
+      <ellipse cx="16" cy="7" rx="4.5" ry="6" fill="#2a1520" />
+      <circle cx="-14" cy="5" r="1.8" fill="#ffffff" />
+      <circle cx="18" cy="5" r="1.8" fill="#ffffff" />
+
+      <!-- Smile -->
+      <path d="M-10 22q10 11 20 0" fill="none" stroke="#792D40" stroke-width="3.5" stroke-linecap="round" />
+
+      <!-- Frangipani (Araliya) flower -->
+      <g transform="translate(36, -8) scale(0.6)">
+        <g fill="#ffffff" stroke="#F3C65B" stroke-width="2.2">
+          <ellipse cx="0" cy="-14" rx="8" ry="14" />
+          <ellipse cx="0" cy="-14" rx="8" ry="14" transform="rotate(72)" />
+          <ellipse cx="0" cy="-14" rx="8" ry="14" transform="rotate(144)" />
+          <ellipse cx="0" cy="-14" rx="8" ry="14" transform="rotate(216)" />
+          <ellipse cx="0" cy="-14" rx="8" ry="14" transform="rotate(288)" />
+        </g>
+        <circle r="5.5" fill="#F3C65B" />
+      </g>
+    </g>
+  </g>
+</svg>
