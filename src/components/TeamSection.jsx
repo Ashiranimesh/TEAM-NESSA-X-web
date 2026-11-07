@@ -28,9 +28,31 @@ export default function TeamSection() {
               <span className="team-role">{member.role}</span>
               <p className="team-bio">{member.bio}</p>
               <div className="team-links">
-                <a href="#team" aria-label="LinkedIn" title="LinkedIn">in</a>
-                <a href="#team" aria-label="GitHub" title="GitHub">gh</a>
-                <a href="mailto:contact@tikirilia.lk" aria-label="Email" title="Email">✉</a>
+                <a
+                  href={member.linkedin || '#team'}
+                  target={member.linkedin ? '_blank' : undefined}
+                  rel={member.linkedin ? 'noopener noreferrer' : undefined}
+                  aria-label={`${member.name}'s LinkedIn`}
+                  title="LinkedIn"
+                >
+                  in
+                </a>
+                <a
+                  href={member.github || '#team'}
+                  target={member.github ? '_blank' : undefined}
+                  rel={member.github ? 'noopener noreferrer' : undefined}
+                  aria-label={`${member.name}'s GitHub`}
+                  title="GitHub"
+                >
+                  Git
+                </a>
+                <a
+                  href={member.email ? `mailto:${member.email}` : 'mailto:contact@tikirilia.lk'}
+                  aria-label={`Email ${member.name}`}
+                  title="Email"
+                >
+                  ✉
+                </a>
               </div>
             </div>
           ))}

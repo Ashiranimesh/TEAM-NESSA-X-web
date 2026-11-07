@@ -15,7 +15,7 @@ export default function Navbar({ onSayAyubowan, soundEnabled, onToggleSound }) {
           <li><a href="#team">Our team</a></li>
         </ul>
         <div className="navbtns">
-          <button className="btn alt" onClick={onSayAyubowan}>
+          <button className="btn alt nav-ayubowan" onClick={onSayAyubowan}>
             Say ayubowan
           </button>
           <button

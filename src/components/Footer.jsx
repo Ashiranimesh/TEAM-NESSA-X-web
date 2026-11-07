@@ -1,19 +1,6 @@
-import React, { useRef } from 'react';
+import React from 'react';
 
-export default function Footer({
-  onHaveNiceDay,
-  onOpenRecorder,
-  onVoiceFilesLoaded
-}) {
-  const fileInputRef = useRef(null);
-
-  const handleFileChange = e => {
-    const files = Array.from(e.target.files || []);
-    if (files.length > 0) {
-      onVoiceFilesLoaded(files);
-    }
-  };
-
+export default function Footer() {
   return (
     <footer>
       <b>Smart Tikirilia 1.0</b>
@@ -72,37 +59,10 @@ export default function Footer({
         </a>
       </div>
 
-      <div style={{ display: 'flex', gap: '10px', justifyContent: 'center', flexWrap: 'wrap', marginTop: '16px' }}>
-        <button type="button" className="btn alt" onClick={onHaveNiceDay}>
-          Have a nice day 👋
-        </button>
+      <p style={{ margin: '6px 0 0', opacity: 0.35 }}>
+        @2026 Project Smart Tikirilia. All rights reserved.
+      </p>
 
-        <button
-          type="button"
-          className="btn"
-          style={{ background: '#C6A1D2', color: '#4a1b2a', boxShadow: '0 4px 0 #9d78aa' }}
-          onClick={() => fileInputRef.current?.click()}
-        >
-          🎙️ Load my voice clips
-        </button>
-        <input
-          type="file"
-          ref={fileInputRef}
-          accept="audio/*"
-          multiple
-          hidden
-          onChange={handleFileChange}
-        />
-
-        <button
-          type="button"
-          className="btn"
-          style={{ background: '#8DA17B', color: '#fff', boxShadow: '0 4px 0 #6b7d5b' }}
-          onClick={onOpenRecorder}
-        >
-          🎤 Record voice
-        </button>
-      </div>
     </footer>
   );
 }

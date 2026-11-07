@@ -86,7 +86,7 @@ export const FEATURES = [
     icon: '🏅',
     title: 'Collect badges',
     desc: 'Earn badges and outfits for listening, learning and travelling.',
-    colorClass: ''
+    colorClass: 'lav'
   }
 ];
 
@@ -137,41 +137,56 @@ export const TEAM_MEMBERS = [
   {
     id: 1,
     name: 'Sharifa',
-    role: 'Project Lead & Architect',
+    role: 'Team lead | AI developer | IOT',
     image: '/images/sharifa.jpeg',
     bio: 'Spearheads overall system architecture, research direction, and hardware-software integration for the companion platform.',
-    colorClass: 'lav'
+    colorClass: 'lav',
+    github: 'https://github.com/sharifah-fsn',
+    linkedin: '',
+    email: 'sharifah.20250514@iit.ac.lk'
   },
   {
     id: 2,
     name: 'Erani',
-    role: 'IoT & Embedded Systems',
+    role: 'IOT | AI developer | Frontend Developer',
     image: '/images/erani.jpeg',
     bio: 'Engineers Bluetooth connectivity, responsive touch sensors, microcontroller logic, and doll audio playback circuits.',
-    colorClass: 'sage'
+    colorClass: 'sage',
+    github: 'https://github.com/eranihaththasingha2003-coder',
+    linkedin: '',
+    email: 'erani.20250232@iit.ac.lk'
   },
   {
     id: 3,
     name: 'Naduni',
-    role: 'UI/UX & Mobile App',
+    role: 'UI/UX & Mobile App | AI developer |Frontend Developer',
     image: '/images/naduni.jpeg',
     bio: 'Designs engaging mobile wireframes, playful navigation flows, bilingual phrase cards, and gamified achievement badges.',
-    colorClass: 'yel'
+    colorClass: 'yel',
+    github: 'https://github.com/nadunisam',
+    linkedin: '',
+    email: 'naduni.20250538@iit.ac.lk'
   },
   {
     id: 4,
     name: 'Ashira',
-    role: 'Managing repository & Backend Systems',
+    role: 'IOT | AI developer | Fullstack Developer',
     image: '/images/ashira.jpg',
     bio: 'Develops intelligent dialogue matching, voice synthesis routing, and audio caching pipelines for bilingual interactions.',
-    colorClass: ''
+    colorClass: 'lav',
+    github: 'https://github.com/Ashiranimesh',
+    linkedin: 'https://www.linkedin.com/in/ashira-nimesh-781844365?utm_source=share_via&utm_content=profile&utm_medium=member_android',
+    email: 'ashira.20250523@iit.ac.lk'
   },
   {
     id: 5,
     name: 'Senadi',
-    role: 'Content, Cultural Research',
+    role: 'AI developer | IOT | Frontend Developer',
     image: '/images/senadi.jpeg',
     bio: 'Curates authentic Sinhala and Tamil vocabulary, folkloric stories, regional landmark data, and cultural heritage validation.',
-    colorClass: ''
+    colorClass: 'sage',
+    github: 'https://github.com/senadi20250171-a11y',
+    linkedin: '',
+    email: 'senadi.20250171@iit.ac.lk'
   }
 ];

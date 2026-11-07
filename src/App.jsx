@@ -21,8 +21,7 @@ import {
   speak,
   playPhraseAudio,
   playTrioGreeting,
-  loadAudioClipsFromDb,
-  setCustomAudioUrl
+  loadAudioClipsFromDb
 } from './utils/audioService';
 import { triggerConfetti } from './utils/confettiService';
 
@@ -144,14 +143,6 @@ export default function App() {
     playPhraseAudio(phraseKey, who, greetings[phraseKey]);
   };
 
-  const handleHaveNiceDay = () => {
-    setCurrentMood('wink');
-    setBubbleText('Have a nice day! 👋');
-    speak('Have a nice day!', 'en', '', who);
-    triggerConfetti();
-    showToast('Have a nice day! 👋');
-  };
-
   const handleTour = () => {
     setIsWelcomeOpen(false);
     triggerConfetti();
@@ -162,30 +153,6 @@ export default function App() {
     if (appEl) {
       appEl.scrollIntoView({ behavior: 'smooth' });
     }
-  };
-
-  const handleVoiceFilesLoaded = files => {
-    let count = 0;
-    files.forEach(f => {
-      const name = f.name.toLowerCase();
-      const phraseKey = /ayu/.test(name)
-        ? 'ayubowan'
-        : /van/.test(name)
-        ? 'vanakkam'
-        : /nice|day/.test(name)
-        ? 'niceday'
-        : null;
-
-      if (phraseKey) {
-        const isBoyFile = /boy|male/.test(name) && !/female/.test(name);
-        const fullKey = (isBoyFile ? 'boy-' : '') + phraseKey;
-        const objectUrl = URL.createObjectURL(f);
-        setCustomAudioUrl(fullKey, objectUrl);
-        count++;
-      }
-    });
-
-    showToast(`${count} voice clip(s) loaded! Tap Say ayubowan or greetings to test.`);
   };
 
   return (
@@ -231,11 +198,7 @@ export default function App() {
 
       <TeamSection />
 
-      <Footer
-        onHaveNiceDay={handleHaveNiceDay}
-        onOpenRecorder={() => setIsRecorderOpen(true)}
-        onVoiceFilesLoaded={handleVoiceFilesLoaded}
-      />
+      <Footer />
 
       <WelcomeModal
         isOpen={isWelcomeOpen}

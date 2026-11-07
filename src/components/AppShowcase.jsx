@@ -78,28 +78,16 @@ export default function AppShowcase({
             <div style={{ display: 'flex', gap: '6px', justifyContent: 'center', marginBottom: '12px' }}>
               <button
                 type="button"
-                className="btn"
-                style={{
-                  padding: '4px 14px',
-                  fontSize: '0.82rem',
-                  background: activeLang === 'si' ? 'var(--maroon)' : 'var(--cream)',
-                  color: activeLang === 'si' ? '#fff' : 'var(--maroon)',
-                  boxShadow: 'none'
-                }}
+                className="phone-lang-btn"
+                aria-pressed={activeLang === 'si'}
                 onClick={() => setActiveLang('si')}
               >
                 Sinhala
               </button>
               <button
                 type="button"
-                className="btn"
-                style={{
-                  padding: '4px 14px',
-                  fontSize: '0.82rem',
-                  background: activeLang === 'ta' ? 'var(--maroon)' : 'var(--cream)',
-                  color: activeLang === 'ta' ? '#fff' : 'var(--maroon)',
-                  boxShadow: 'none'
-                }}
+                className="phone-lang-btn"
+                aria-pressed={activeLang === 'ta'}
                 onClick={() => setActiveLang('ta')}
               >
                 Tamil
@@ -111,15 +99,7 @@ export default function AppShowcase({
               <span>🔊</span>
             </div>
 
-            <div
-              style={{
-                textAlign: 'center',
-                fontFamily: 'Fredoka',
-                fontSize: '1.15rem',
-                color: 'var(--maroon)',
-                margin: '10px 0'
-              }}
-            >
+            <div className="phone-phrase-preview">
               {activeLang === 'si' ? 'ඔයාට කොහොමද?' : 'எப்படி இருக்கிறீர்கள்?'}
             </div>
 
@@ -257,7 +237,7 @@ export default function AppShowcase({
 
           {/* Tikirilia's Moods interactive selector */}
           <div>
-            <h3 style={{ fontSize: '1.5rem', color: 'var(--maroon)' }}>
+            <h3 style={{ fontSize: '1.5rem' }}>
               Tikirilia’s moods
             </h3>
             <p className="sub" style={{ marginBottom: '16px' }}>

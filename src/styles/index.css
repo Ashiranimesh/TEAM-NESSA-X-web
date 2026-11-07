@@ -55,26 +55,29 @@ h1, h2, h3, h4 {
   font-family: 'Fredoka', 'Nunito', sans-serif;
   line-height: 1.15;
   margin: 0;
+  color: var(--maroon);
 }
 
 h1 {
   font-size: clamp(2.4rem, 6vw, 4.2rem);
-  color: var(--maroon);
 }
 
 h2 {
   font-size: clamp(1.8rem, 4vw, 2.6rem);
-  color: var(--maroon);
 }
 
 :root[data-theme="dark"] h1,
-:root[data-theme="dark"] h2 {
+:root[data-theme="dark"] h2,
+:root[data-theme="dark"] h3,
+:root[data-theme="dark"] h4 {
   color: var(--yellow);
 }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) h1,
-  :root:not([data-theme="light"]) h2 {
+  :root:not([data-theme="light"]) h2,
+  :root:not([data-theme="light"]) h3,
+  :root:not([data-theme="light"]) h4 {
     color: var(--yellow);
   }
 }
@@ -120,6 +123,12 @@ nav .wrap {
   color: var(--yellow);
 }
 
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .brand {
+    color: var(--yellow);
+  }
+}
+
 .brand i {
   width: 12px;
   height: 12px;
@@ -159,11 +168,114 @@ nav ul a:hover {
   display: flex;
   gap: 8px;
   align-items: center;
+  flex-shrink: 0;
+}
+
+/* Navbar specific button styling */
+nav .btn {
+  padding: 8px 18px;
+  font-size: 0.9rem;
+  line-height: 1.2;
+  box-shadow: 0 3px 0 #4d1827;
+  white-space: nowrap;
+}
+
+nav .btn.alt {
+  box-shadow: 0 3px 0 #c9a040;
+}
+
+nav .btn:hover {
+  transform: translateY(-1px);
+}
+
+nav .btn:active {
+  transform: translateY(2px);
+  box-shadow: 0 1px 0 #4d1827;
+}
+
+nav .btn.alt:active {
+  box-shadow: 0 1px 0 #c9a040;
 }
 
 .snd {
-  padding: 10px 14px;
-  font-size: 1.1rem;
+  padding: 8px 12px;
+  font-size: 1rem;
+  line-height: 1.2;
+  min-width: 40px;
+}
+
+@media (max-width: 640px) {
+  nav .wrap {
+    height: 56px;
+    padding: 0 14px;
+    gap: 8px;
+  }
+
+  .brand {
+    font-size: 1.1rem;
+    gap: 6px;
+    white-space: nowrap;
+  }
+
+  .brand i {
+    width: 10px;
+    height: 10px;
+  }
+
+  .navbtns {
+    gap: 6px;
+  }
+
+  nav .btn {
+    padding: 6px 12px;
+    font-size: 0.82rem;
+    box-shadow: 0 2px 0 #4d1827;
+  }
+
+  nav .btn.alt {
+    box-shadow: 0 2px 0 #c9a040;
+  }
+
+  nav .btn:hover {
+    transform: none;
+  }
+
+  nav .btn:active {
+    transform: translateY(1px);
+    box-shadow: 0 1px 0 #4d1827;
+  }
+
+  nav .btn.alt:active {
+    box-shadow: 0 1px 0 #c9a040;
+  }
+
+  .snd {
+    padding: 6px 9px;
+    font-size: 0.95rem;
+    min-width: 36px;
+  }
+}
+
+@media (max-width: 380px) {
+  nav .wrap {
+    padding: 0 10px;
+    gap: 6px;
+  }
+
+  .brand {
+    font-size: 0.95rem;
+  }
+
+  nav .btn {
+    padding: 5px 9px;
+    font-size: 0.78rem;
+  }
+
+  .snd {
+    padding: 5px 8px;
+    font-size: 0.85rem;
+    min-width: 32px;
+  }
 }
 
 /* Buttons */
@@ -279,6 +391,16 @@ nav ul a:hover {
   box-shadow: 0 4px 0 var(--line);
 }
 
+:root[data-theme="dark"] .pick .btn[aria-pressed="false"] {
+  color: var(--ink);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .pick .btn[aria-pressed="false"] {
+    color: var(--ink);
+  }
+}
+
 /* Doll Stage */
 .stage {
   position: relative;
@@ -341,6 +463,29 @@ body[data-mode="boy"] .blob {
   transform-origin: bottom left;
   animation: pop 0.45s cubic-bezier(0.3, 1.6, 0.5, 1);
   z-index: 5;
+}
+
+:root[data-theme="dark"] .bubble {
+  background: var(--card);
+  color: var(--yellow);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .bubble {
+    background: var(--card);
+    color: var(--yellow);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+  }
+}
+
+@media (max-width: 480px) {
+  .bubble {
+    left: 4%;
+    top: 0%;
+    font-size: 0.95rem;
+    padding: 8px 12px;
+  }
 }
 
 @keyframes pop {
@@ -508,6 +653,7 @@ body[data-mode="boy"] .card.sage {
 
 .phone {
   width: 310px;
+  max-width: 100%;
   height: 560px;
   background: #1e1318;
   border-radius: 44px;
@@ -562,6 +708,12 @@ body[data-mode="boy"] .card.sage {
   color: var(--yellow);
 }
 
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .screen-body h4 {
+    color: var(--yellow);
+  }
+}
+
 .phone-tabs {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -588,6 +740,70 @@ body[data-mode="boy"] .card.sage {
   background: var(--card);
   color: var(--maroon);
   box-shadow: 0 2px 5px rgba(0,0,0,0.06);
+}
+
+:root[data-theme="dark"] .phone-tabs button[aria-selected="true"] {
+  background: var(--card);
+  color: var(--yellow);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .phone-tabs button[aria-selected="true"] {
+    background: var(--card);
+    color: var(--yellow);
+  }
+}
+
+.phone-lang-btn {
+  padding: 5px 16px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--cream);
+  color: var(--ink);
+  cursor: pointer;
+  box-shadow: none;
+  transition: all 0.15s;
+}
+
+.phone-lang-btn[aria-pressed="true"] {
+  background: var(--maroon);
+  color: #fff;
+  border-color: var(--maroon);
+}
+
+:root[data-theme="dark"] .phone-lang-btn[aria-pressed="true"] {
+  background: var(--yellow);
+  color: var(--maroon);
+  border-color: var(--yellow);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .phone-lang-btn[aria-pressed="true"] {
+    background: var(--yellow);
+    color: var(--maroon);
+    border-color: var(--yellow);
+  }
+}
+
+.phone-phrase-preview {
+  text-align: center;
+  font-family: 'Fredoka', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--maroon);
+  margin: 10px 0;
+}
+
+:root[data-theme="dark"] .phone-phrase-preview {
+  color: var(--yellow);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .phone-phrase-preview {
+    color: var(--yellow);
+  }
 }
 
 /* Phone Inner Screens */
@@ -848,6 +1064,13 @@ body[data-mode="boy"] .card.sage {
   border-color: var(--yellow);
 }
 
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .team-avatar {
+    background: var(--card);
+    border-color: var(--yellow);
+  }
+}
+
 .team-avatar img {
   width: 100%;
   height: 100%;
@@ -863,6 +1086,12 @@ body[data-mode="boy"] .card.sage {
 
 :root[data-theme="dark"] .team-card h3 {
   color: var(--yellow);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .team-card h3 {
+    color: var(--yellow);
+  }
 }
 
 .team-role {
@@ -881,6 +1110,13 @@ body[data-mode="boy"] .card.sage {
 :root[data-theme="dark"] .team-role {
   color: var(--yellow);
   background: #2b1620;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .team-role {
+    color: var(--yellow);
+    background: #2b1620;
+  }
 }
 
 .team-bio {
@@ -920,6 +1156,13 @@ body[data-mode="boy"] .card.sage {
 :root[data-theme="dark"] .team-links a {
   background: #2b1620;
   color: var(--ink);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .team-links a {
+    background: #2b1620;
+    color: var(--ink);
+  }
 }
 
 /* Footer */
@@ -1013,6 +1256,12 @@ footer b {
 
 :root[data-theme="dark"] .modal-dialog h3 {
   color: var(--yellow);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .modal-dialog h3 {
+    color: var(--yellow);
+  }
 }
 
 /* Toast */

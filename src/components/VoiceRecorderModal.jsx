@@ -97,7 +97,7 @@ export default function VoiceRecorderModal({
                   borderColor: isRecording ? '#b3261e' : 'var(--line)'
                 }}
               >
-                <span style={{ fontWeight: 600, color: 'var(--maroon)' }}>{p.label}</span>
+                <span style={{ fontWeight: 600 }}>{p.label}</span>
                 <div style={{ display: 'flex', gap: '6px' }}>
                   <button
                     type="button"
