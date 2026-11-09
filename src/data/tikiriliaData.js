@@ -142,7 +142,7 @@ export const TEAM_MEMBERS = [
     bio: 'Spearheads overall system architecture, research direction, and hardware-software integration for the companion platform.',
     colorClass: 'lav',
     github: 'https://github.com/sharifah-fsn',
-    linkedin: '',
+    linkedin: 'https://www.linkedin.com/in/f-sharifah-nazeem?utm_source=share_via&utm_content=profile&utm_medium=member_android',
     email: 'sharifah.20250514@iit.ac.lk'
   },
   {
@@ -153,7 +153,7 @@ export const TEAM_MEMBERS = [
     bio: 'Engineers Bluetooth connectivity, responsive touch sensors, microcontroller logic, and doll audio playback circuits.',
     colorClass: 'sage',
     github: 'https://github.com/eranihaththasingha2003-coder',
-    linkedin: '',
+    linkedin: 'https://www.linkedin.com/in/erani-chamathsara-1490943b0/',
     email: 'erani.20250232@iit.ac.lk'
   },
   {
@@ -164,7 +164,7 @@ export const TEAM_MEMBERS = [
     bio: 'Designs engaging mobile wireframes, playful navigation flows, bilingual phrase cards, and gamified achievement badges.',
     colorClass: 'yel',
     github: 'https://github.com/nadunisam',
-    linkedin: '',
+    linkedin: 'https://www.linkedin.com/in/naduni-samarawickrama-655133389/',
     email: 'naduni.20250538@iit.ac.lk'
   },
   {
@@ -186,7 +186,7 @@ export const TEAM_MEMBERS = [
     bio: 'Curates authentic Sinhala and Tamil vocabulary, folkloric stories, regional landmark data, and cultural heritage validation.',
     colorClass: 'sage',
     github: 'https://github.com/senadi20250171-a11y',
-    linkedin: '',
+    linkedin: 'https://www.linkedin.com/in/senadi-de-silva-27012a3b4?utm_source=share_via&utm_content=profile&utm_medium=member_ios',
     email: 'senadi.20250171@iit.ac.lk'
   }
 ];
