@@ -163,7 +163,7 @@ export const TEAM_MEMBERS = [
     image: '/images/naduni.jpeg',
     bio: 'Designs engaging mobile wireframes, playful navigation flows, bilingual phrase cards, and gamified achievement badges.',
     colorClass: 'yel',
-    github: 'https://github.com/nadunisam',
+    github: 'https://github.com/naduni20259',
     linkedin: 'https://www.linkedin.com/in/naduni-samarawickrama-655133389/',
     email: 'naduni.20250538@iit.ac.lk'
   },
