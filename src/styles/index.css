@@ -1006,22 +1006,58 @@ body[data-mode="boy"] .card.sage {
 }
 
 /* Team Section */
+#team .wrap {
+  max-width: 1240px;
+}
+
 .team-grid {
   display: grid;
-  gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+@media (max-width: 991px) {
+  .team-grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 14px;
+    padding: 8px 4px 20px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: var(--line) transparent;
+  }
+
+  .team-grid::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  .team-grid::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .team-grid::-webkit-scrollbar-thumb {
+    background-color: var(--line);
+    border-radius: 999px;
+  }
+
+  .team-card {
+    flex: 0 0 220px;
+    scroll-snap-align: start;
+  }
 }
 
 .team-card {
   background: var(--card);
   border: 2px solid var(--line);
-  border-radius: 24px;
-  padding: 26px 20px;
+  border-radius: 22px;
+  padding: 22px 14px;
   text-align: center;
   transition: transform 0.2s, box-shadow 0.2s;
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-width: 0;
 }
 
 .team-card:hover {
@@ -1045,13 +1081,13 @@ body[data-mode="boy"] .card.sage {
 }
 
 .team-avatar {
-  width: 90px;
-  height: 90px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
-  margin-bottom: 14px;
+  margin-bottom: 12px;
   display: grid;
   place-items: center;
-  font-size: 2.4rem;
+  font-size: 2.2rem;
   background: #fff;
   border: 3px solid var(--maroon);
   box-shadow: 0 6px 14px #792d4018;
@@ -1079,7 +1115,7 @@ body[data-mode="boy"] .card.sage {
 }
 
 .team-card h3 {
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   margin-bottom: 4px;
   color: var(--maroon);
 }
@@ -1096,15 +1132,17 @@ body[data-mode="boy"] .card.sage {
 
 .team-role {
   display: inline-block;
-  font: 700 0.78rem 'Fredoka', sans-serif;
+  font: 700 0.72rem 'Fredoka', sans-serif;
   color: var(--maroon);
   background: var(--cream);
-  padding: 4px 12px;
+  padding: 3px 8px;
   border-radius: 99px;
   border: 1px solid var(--line);
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   text-transform: uppercase;
-  letter-spacing: 0.4px;
+  letter-spacing: 0.3px;
+  line-height: 1.25;
+  word-break: break-word;
 }
 
 :root[data-theme="dark"] .team-role {
@@ -1120,10 +1158,10 @@ body[data-mode="boy"] .card.sage {
 }
 
 .team-bio {
-  font-size: 0.9rem;
-  line-height: 1.5;
+  font-size: 0.85rem;
+  line-height: 1.45;
   opacity: 0.88;
-  margin: 0 0 16px;
+  margin: 0 0 14px;
 }
 
 .team-links {
